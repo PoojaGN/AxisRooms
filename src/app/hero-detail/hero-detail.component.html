@@ -1,0 +1,15 @@
+
+<div *ngIf="hero" class="col-md-6" style="border:1px solid blue; background-color:beige">
+<h2 style="text-align:center">Messages</h2>
+  <h3>{{ hero.user | uppercase }}</h3>
+  <!-- <div><span>id: </span>{{hero.id}}</div> -->
+  <div>
+      <div style="color:blueviolet; background-color:aqua">{{hero.messages[0].text}}</div>
+      <div style="float:right">{{hero.messages[0].created}}</div>
+      <!-- <div>{{hero.messages[0].createdBy}}</div> -->
+      
+  </div>
+  <div style="margin-top:20px">
+      <input type="text" placeholder="type your message here"/>
+  </div>
+</div>
