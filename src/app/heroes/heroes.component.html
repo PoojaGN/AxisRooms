@@ -1,0 +1,11 @@
+<ul class="heroes" class="col-lg-3" style="list-style-type:none">
+  <li *ngFor="let hero of heroes" style="background-color:brown; border:1px solid black;"
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+    <!-- <span class="badge">{{hero.id}}</span> -->
+    <img src="{{hero.img}}"/>
+    <span> {{hero.user}}</span>
+  </li>
+</ul>
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
